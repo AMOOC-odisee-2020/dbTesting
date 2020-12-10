@@ -1,0 +1,51 @@
+{
+  "course": [
+    {
+      "titel": "Course 1",
+      "_id": "blabla",
+      "estimatedTime": 23,
+      "objectives": [
+        { "objective": "luisteren" },
+        { "objective": "echt luisteren" }
+      ],
+      "chapters": [
+        {
+          "titel": "Chapter 1",
+          "subChapters": [
+            {
+              "titel": "subchapter 1",
+              "content": "een zeer lange string",
+              "Quizes": [
+                {
+                  "_id": "blabla"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "user":[
+    {
+      "firstName": "Elian",
+      "lastName": "Van Cutsem",
+      "Progress": [
+        {
+          "Quizid": "blabla",
+          "Answers": [
+            {
+              "QuestionId": "blabla",
+              "userAnswer": "blablala"
+            },
+            {
+              "QuestionId": "blabla",
+              "userAnswer": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "certificate": []
+}
