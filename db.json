@@ -2,7 +2,7 @@
   "course": [
     {
       "titel": "Course 1",
-      "_id": "blabla",
+      "_id": "course1",
       "estimatedTime": 23,
       "objectives": [
         { "objective": "luisteren" },
@@ -17,7 +17,23 @@
               "content": "een zeer lange string",
               "Quizes": [
                 {
-                  "_id": "blabla"
+                  "_id": "quizOne",
+                  "questions": [
+                    {
+                      "_id": "questionOne",
+                      "vraagstelling": "Hoe oud je ben je?"
+                    },
+                    {
+                      "_id": "questionTwo",
+                      "vraagstelling": "Hoe oud ben je",
+                      "uitleg": "Je antwoordde waarschijnlijk fout",
+                      "antwoorden": [
+                        { "+15": false },
+                        { "+20": true },
+                        { "+30": false }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -28,24 +44,39 @@
   ],
   "user":[
     {
+      "_id": "userId",
       "firstName": "Elian",
       "lastName": "Van Cutsem",
-      "Progress": [
+      "progressPerCourse": [
         {
-          "Quizid": "blabla",
+          "courseId": "courseOne",
+          "progress": [
+            { "subchapter1": true },
+            { "subchapter2": false }
+          ]
+        }
+      ],
+      "ProgressPerQuiz": [
+        {
+          "quizId": "quizOne",
           "Answers": [
             {
-              "QuestionId": "blabla",
-              "userAnswer": "blablala"
+              "_id": "questionOne",
+              "userAnswer": "Ik ben 21 jaar"
             },
             {
-              "QuestionId": "blabla",
-              "userAnswer": true
+              "_id": "questionTwo",
+              "userAnswer": "+30"
             }
           ]
         }
       ]
     }
   ],
-  "certificate": []
+  "certificate": [
+    {
+      "CourseId": "courseOne",
+      "userId": "userId"
+    }
+  ]
 }
